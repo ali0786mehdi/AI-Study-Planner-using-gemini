@@ -1,0 +1,4 @@
+// Mongoose/MongoDB models will go here for future integration
+// Example: User preferences, saved study plans, etc.
+
+export {};
