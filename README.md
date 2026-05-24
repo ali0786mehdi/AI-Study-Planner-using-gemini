@@ -1,12 +1,12 @@
 # AI Study Planner 🧠
 
-A production-ready, full-stack MERN application that generates personalized AI-powered study plans using Google Gemini 1.5 Flash.
+A production-ready, full-stack MERN application that generates personalized AI-powered study plans using Google Gemini 2.5 Flash.
 
 ## Tech Stack
 
 - **Frontend**: React 18 + TypeScript + Vite + Tailwind CSS
 - **Backend**: Node.js + Express + TypeScript (strict mode)
-- **AI**: Google Generative AI SDK (Gemini 1.5 Flash)
+- **AI**: Google Generative AI SDK (Gemini 2.5 Flash)
 - **Dev**: Concurrently (runs both servers from root)
 
 ## Project Structure
