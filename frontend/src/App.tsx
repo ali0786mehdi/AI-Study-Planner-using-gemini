@@ -106,7 +106,7 @@ function App() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-slate-800/60 mt-16">
         <div className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-slate-600">
-          <span>AI Study Planner · Built with Gemini 1.5 Flash</span>
+          <span>AI Study Planner · Built with Gemini 2.5 Flash</span>
           <span>MERN Stack + TypeScript</span>
         </div>
       </footer>
