@@ -19,6 +19,7 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://127.0.0.1:5173',
   'http://127.0.0.1:3000',
+  'https://ai-study-planner-using-gemini.vercel.app' // <-- Your Vercel VIP pass
 ];
 
 app.use(
