@@ -65,7 +65,38 @@ export const generateStudyPlan = async (
       data: studyPlan,
       message: `Study plan generated in ${duration}ms`,
     });
+
   } catch (error: unknown) {
-    next(error); // Pass to global error handler
+    // ── Error Handling ────────────────────────────────────────────────────────
+    const message = error instanceof Error ? error.message : String(error);
+
+    console.error('[Planner] Error caught:', {
+      message,
+      stack: error instanceof Error ? error.stack : undefined,
+      body: req.body,
+    });
+
+    // Handle Google 503 Overloaded
+    if (message.includes('503 Service Unavailable')) {
+      res.status(503).json({
+        success: false,
+        error: 'ServiceUnavailable',
+        message: "Google's AI servers are currently overloaded. Please try again in a few moments.",
+      });
+      return;
+    }
+
+    // Handle JSON parsing failure from Gemini response
+    if (message.includes('Failed to parse AI response as valid JSON')) {
+      res.status(500).json({
+        success: false,
+        error: 'ParseError',
+        message: 'The AI generated an unreadable response format. Please try your request again.',
+      });
+      return;
+    }
+
+    // Pass all other unknown errors to the global error handler in app.ts
+    next(error);
   }
 };
