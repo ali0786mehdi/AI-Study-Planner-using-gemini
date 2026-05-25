@@ -56,7 +56,7 @@ async function apiFetch<T>(
       return {
         success: false,
         error: 'NetworkError',
-        message: 'Cannot reach the server. Make sure the backend is running on port 5000.',
+        message: `Network Error: Could not connect to the server at ${BASE_URL}. Check console for CORS or network issues.`,
       };
     }
 
