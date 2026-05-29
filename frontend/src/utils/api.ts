@@ -4,6 +4,7 @@ import type { StudyPlanRequest, StudyPlan, ApiResponse } from '../types';
 // API Utility — Clean fetch abstraction for the Study Planner backend
 // ─────────────────────────────────────────────────────────────────────────────
 
+
 const BASE_URL = import.meta.env['VITE_API_URL'] ?? 'https://ai-study-planner-using-gemini-production.up.railway.app';
 
 /**
