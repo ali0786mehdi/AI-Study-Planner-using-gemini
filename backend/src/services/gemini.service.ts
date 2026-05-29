@@ -26,7 +26,7 @@ class GeminiService {
     };
 
     this.model = genAI.getGenerativeModel({
-      model: 'gemini-3.5-flash',,
+      model: 'gemini-3.5-flash',
       generationConfig: this.generationConfig,
     });
   }
